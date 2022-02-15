@@ -1,11 +1,12 @@
 # depslib dependency file v1.0
-1644769871 source:d:\git_labs\baramba-andrii-ki-21-1\lab08\prj\testdriver\main.cpp
-	<iostream>
-	"ModulesBaramba.h"
-
-1644763626 d:\git_labs\baramba-andrii-ki-21-1\lab08\prj\modulesbaramba.h
+1644924291 source:d:\git_labs\baramba-andrii-ki-21-1\lab08\prj\modulesbaramba\main.cpp
 	<cmath>
 
-1644771131 source:d:\git_labs\baramba-andrii-ki-21-1\lab08\prj\modulesbaramba\main.cpp
-	"cmath"
+1644934993 source:d:\git_labs\baramba-andrii-ki-21-1\lab08\prj\testdriver\main.cpp
+	<iostream>
+	<iomanip>
+	"ModulesBaramba.h"
+
+1644924311 d:\git_labs\baramba-andrii-ki-21-1\lab08\prj\modulesbaramba.h
+	<cmath>
 

@@ -26,22 +26,16 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
-					<Add directory="../../prj" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-					<Add library="../ModulesBaramba/bin/Debug/libModulesBaramba.a" />
 				</Linker>
 			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
-			<Add directory="../../prj" />
 		</Compiler>
-		<Linker>
-			<Add library="D:/Git_Labs/Baramba-Andrii-KI-21-1/lab08/prj/ModulesBaramba/bin/Debug/libModulesBaramba.a" />
-		</Linker>
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
