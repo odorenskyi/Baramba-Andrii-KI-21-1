@@ -49,7 +49,7 @@ string helmetSize(int headSize){
     }
 
     headSize = round(headSize / 10);
-    int minimalSize = 48;
+    int minimalSize = 47;
 
     char helmetSizes[8][255] = {"Children's helmet, size S",
                                 "Children's helmet, size M",
@@ -72,10 +72,7 @@ string helmetSize(int headSize){
     }
 }
 
-int binOnesZeros(int number){
-
-    if(number < 0) { cout << "Value is less than the minimal value, defined as 0" << endl; number = 0; }
-    else if (number > 8999) { cout << "Your value is more than the maximal value, defined as 8999" << endl; number = 8999; };
+string binOnesZeros(int number){
 
     int binZeros = 0;
     int iter_num = ~number;
@@ -85,12 +82,14 @@ int binOnesZeros(int number){
         binZeros ++;
     }
 
+    if(number < 0 || number > 8999){
+        return "Wrong number! Your number: " + to_string(number);
+    }
+
     switch(number >> 9 & 1){
         case 0:
-            cout << "Number of binary 0 = " ;
-            return binZeros;
+            return "Number of binary 0 = " + to_string(binZeros);
         case 1:
-            cout << "Number of binary 1 = " ;
-            return 32 - binZeros;;
+            return "Number of binary 1 = " + to_string(32 - binZeros);
     }
 }
