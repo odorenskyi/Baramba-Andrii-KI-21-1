@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1648151282 source:d:\git_labs\baramba-andrii-ki-21-1\lab08\prj\modulesbaramba\main.cpp
+	<iostream>
+	"cmath"
+
+1649079097 source:d:\git_labs\baramba-andrii-ki-21-1\lab10\prj\modulesbaramba\main.cpp
+	<iostream>
+	<fstream>
+	<ctime>
+	<algorithm>
+	<bitset>
+	"cmath"
+
