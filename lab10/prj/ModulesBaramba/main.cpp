@@ -102,9 +102,9 @@ void authorInformation(string path)
 {
     ofstream fout;
     fout.open(path);
-    fout << "Ìîäóëü ðîçðîáèâ Áàðàìáà Àíäð³é\n" <<
-            "Öåíòðàëüíîóêðà¿íñüêèé Íàö³îíàëüíèé Òåõí³÷íèé Óí³âåðñèòåò\n" <<
-            "Êðîïèâíèöüêèé, Óêðà¿íà, 2022\n";
+    fout << "ÐœÐ¾Ð´ÑƒÐ»ÑŒ Ñ€Ð¾Ð·Ñ€Ð¾Ð±Ð¸Ð² Ð‘Ð°Ñ€Ð°Ð¼Ð±Ð° ÐÐ½Ð´Ñ€Ñ–Ð¹\n" <<
+            "Ð¦ÐµÐ½Ñ‚Ñ€Ð°Ð»ÑŒÐ½Ð¾ÑƒÐºÑ€Ð°Ñ—Ð½ÑÑŒÐºÐ¸Ð¹ ÐÐ°Ñ†Ñ–Ð¾Ð½Ð°Ð»ÑŒÐ½Ð¸Ð¹ Ð¢ÐµÑ…Ð½Ñ–Ñ‡Ð½Ð¸Ð¹ Ð£Ð½Ñ–Ð²ÐµÑ€ÑÐ¸Ñ‚ÐµÑ‚\n" <<
+            "ÐšÑ€Ð¾Ð¿Ð¸Ð²Ð½Ð¸Ñ†ÑŒÐºÐ¸Ð¹, Ð£ÐºÑ€Ð°Ñ—Ð½Ð°, 2022\n";
     fout.close();
 }
 
@@ -133,37 +133,22 @@ string readfile(string path)
     return text;
 }
 
-string to_lower(string text)
-{
-    string lower = "àáâã´äåºæçè³¿éêëìíîïðñòóôõö÷øùüþÿ";
-    string upper = "ÀÁÂÃ¥ÄÅªÆÇÈ²¯ÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÜÞß";
-    for(int i = 0; i < text.length(); i++){
-        for(int j = 0; j < upper.length(); j++){
-            if(text[i] == upper[j]){
-                text[i] = lower[j];
-                break;
-            }
-        }
-    }
-    return text;
-}
-
 void punctuation(string path)
 {
     string origPoem = readfile("M_Rylsky_poem.txt");
     string inputPoem = readfile("inputText.txt");
 
-    origPoem = to_lower(origPoem);
-    inputPoem = to_lower(inputPoem);
+    string signs = "!?,.:;-";
 
-    string signs = "?!,.’;:-";
-    char origPunct[8];
-    char inputPunct[8];
+    string origPunct;
+    string inputPunct;
+
     int k = 0;
+
     for(int i = 0; i < origPoem.length(); i++){
         for(int j = 0; j < signs.length(); j++){
                 if(origPoem[i] == signs[j]){
-                    origPunct[k] = origPoem[i];
+                    origPunct.append(1, origPoem[i]);
                     k++;
                     break;
                 }
@@ -171,27 +156,29 @@ void punctuation(string path)
     }
 
     k = 0;
+    cout << endl << endl;
     for(int i = 0; i < inputPoem.length(); i++){
         for(int j = 0; j < signs.length(); j++){
                 if(inputPoem[i] == signs[j]){
-                    inputPunct[k] = inputPoem[i];
-                    k++;
+                    inputPunct.append(1, inputPoem[i]);
+                    l++;
                     break;
                 }
         }
     }
 
-    bool result = equal(begin(origPunct), end(origPunct), begin(inputPunct), end(inputPunct));
+    bool result = (inputPunct == origPunct);
 
     ofstream fout;
     fout.open(path, ios_base::app);
     switch(result){
     case 0:
-        fout << "\nÂ³äïîâ³äíî äî àâòîðñüêîãî îðèã³íàëó, ó âõ³äíîìó ôàéë³ ïóíêòóàö³éí³ ïîìèëêè íàÿâí³";
+        fout << "\nÐ’Ñ–Ð´Ð¿Ð¾Ð²Ñ–Ð´Ð½Ð¾ Ð´Ð¾ Ð°Ð²Ñ‚Ð¾Ñ€ÑÑŒÐºÐ¾Ð³Ð¾ Ð¾Ñ€Ð¸Ð³Ñ–Ð½Ð°Ð»Ñƒ, Ñƒ Ð²Ñ…Ñ–Ð´Ð½Ð¾Ð¼Ñƒ Ñ„Ð°Ð¹Ð»Ñ– Ð¿ÑƒÐ½ÐºÑ‚ÑƒÐ°Ñ†Ñ–Ð¹Ð½Ñ– Ð¿Ð¾Ð¼Ð¸Ð»ÐºÐ¸ Ð½Ð°ÑÐ²Ð½Ñ–";
+        fout.close();
     case 1:
-        fout << "\nÂ³äïîâ³äíî äî àâòîðñüêîãî îðèã³íàëó, ó âõ³äíîìó ôàéë³ ïóíêòóàö³éíèõ ïîìèëîê íåìàº";
+        fout << "\nÐ’Ñ–Ð´Ð¿Ð¾Ð²Ñ–Ð´Ð½Ð¾ Ð´Ð¾ Ð°Ð²Ñ‚Ð¾Ñ€ÑÑŒÐºÐ¾Ð³Ð¾ Ð¾Ñ€Ð¸Ð³Ñ–Ð½Ð°Ð»Ñƒ, Ñƒ Ð²Ñ…Ñ–Ð´Ð½Ð¾Ð¼Ñƒ Ñ„Ð°Ð¹Ð»Ñ– Ð¿ÑƒÐ½ÐºÑ‚ÑƒÐ°Ñ†Ñ–Ð¹Ð½Ð¸Ñ… Ð¿Ð¾Ð¼Ð¸Ð»Ð¾Ðº Ð½ÐµÐ¼Ð°Ñ”";
+        fout.close();
     }
-    fout.close();
 }
 
 void alfabet(string path)
