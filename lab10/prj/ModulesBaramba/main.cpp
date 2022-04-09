@@ -98,7 +98,7 @@ string binOnesZeros(int number){
     }
 }
 
-void authorInformation(string path)
+bool authorInformation(string path)
 {
     ofstream fout;
     fout.open(path);
@@ -106,15 +106,17 @@ void authorInformation(string path)
             "Центральноукраїнський Національний Технічний Університет\n" <<
             "Кропивницький, Україна, 2022\n";
     fout.close();
+    return true;
 }
 
-void randNum(string path)
+bool randNum(string path)
 {
     ofstream fout;
     srand(time(0));
     fout.open(path, ios_base::app);
     fout << 10 + rand() % 91;
     fout.close();
+    return true;
 }
 
 string readfile(string path)
@@ -133,7 +135,7 @@ string readfile(string path)
     return text;
 }
 
-void punctuation(string path)
+bool punctuation(string path)
 {
     string origPoem = readfile("M_Rylsky_poem.txt");
     string inputPoem = readfile("inputText.txt");
@@ -161,7 +163,7 @@ void punctuation(string path)
         for(int j = 0; j < signs.length(); j++){
                 if(inputPoem[i] == signs[j]){
                     inputPunct.append(1, inputPoem[i]);
-                    l++;
+                    k++;
                     break;
                 }
         }
@@ -173,20 +175,22 @@ void punctuation(string path)
     fout.open(path, ios_base::app);
     switch(result){
     case 0:
-        fout << "\nВідповідно до авторського оригіналу, у вхідному файлі пунктуаційні помилки наявні";
+        fout << "\nВідповідно до авторського оригіналу, у вхідному файлі пунктуаційні помилки наявні\n";
         fout.close();
     case 1:
-        fout << "\nВідповідно до авторського оригіналу, у вхідному файлі пунктуаційних помилок немає";
+        fout << "\nВідповідно до авторського оригіналу, у вхідному файлі пунктуаційних помилок немає\n";
         fout.close();
     }
+    return true;
 }
 
-void alfabet(string path)
+bool alfabet(string path)
 {
     ofstream fout;
     fout.open(path, ios_base::app);
     char letter = 'A';
     int j = 0;
+    fout << "\n";
     for(int i = 0; i < 26; i++){
         fout << letter << " ";
         letter++;
@@ -194,10 +198,12 @@ void alfabet(string path)
         if(j == 4){ fout << "\n"; j = 0; };
         if(i == 23) { fout << "  "; };
     }
+    fout << "\n";
     fout.close();
+    return true;
 }
 
-void dateTime(string path)
+bool dateTime(string path)
 {
     ofstream fout;
     fout.open(path, ios_base::app);
@@ -205,12 +211,14 @@ void dateTime(string path)
     time(&curtime);
     fout << "\n\n" << ctime(&curtime);
     fout.close();
+    return true;
 }
 
-void binNumber(int number, string path)
+bool binNumber(int number, string path)
 {
     ofstream fout;
     fout.open(path, ios_base::app);
-    fout << "\n" << bitset<16> (number);
+    fout << "\n" << bitset<16> (number) << "\n";
     fout.close();
+    return true;
 }
