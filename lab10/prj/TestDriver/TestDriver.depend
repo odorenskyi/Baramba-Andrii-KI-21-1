@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1649498017 source:d:\git_labs\baramba-andrii-ki-21-1\lab10\prj\testdriver\main.cpp
+	<iostream>
+	<cstring>
+	<conio.h>
+	<fstream>
+	"ModulesBaramba.h"
+
+1649496030 source:d:\git_labs\baramba-andrii-ki-21-1\lab10\prj\modulesbaramba\main.cpp
+	<iostream>
+	<fstream>
+	<ctime>
+	<algorithm>
+	<bitset>
+	"cmath"
+
+1649344362 d:\git_labs\baramba-andrii-ki-21-1\lab10\prj\modulesbaramba.h
+	<iostream>
+	<cmath>
+
