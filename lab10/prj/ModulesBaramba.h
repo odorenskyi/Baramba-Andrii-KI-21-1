@@ -10,12 +10,12 @@ std::string BeaufortScale(int BeaufortScore);
 std::string helmetSize(int headSize);
 std::string binOnesZeros(int number);
 
-void authorInformation(string path);
-void randNum(string path);
-std::string readfile(string path);
-void punctuation(string path);
-void alfabet(string path);
-void dateTime(string path);
-void binNumber(int number, string path);
+bool authorInformation(std::string path);
+bool randNum(std::string path);
+std::string readfile(std::string path);
+bool punctuation(std::string path);
+bool alfabet(std::string path);
+bool dateTime(std::string path);
+bool binNumber(int number, std::string path);
 
 #endif // MODULESBARAMBA_H_INCLUDED
