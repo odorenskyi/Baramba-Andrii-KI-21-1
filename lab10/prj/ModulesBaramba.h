@@ -14,7 +14,7 @@ bool authorInformation(std::string path);
 bool randNum(std::string path);
 std::string readfile(std::string path);
 bool punctuation(std::string path);
-bool alfabet(std::string path);
+bool alphabet(std::string path);
 bool dateTime(std::string path);
 bool binNumber(int number, std::string path);
 
