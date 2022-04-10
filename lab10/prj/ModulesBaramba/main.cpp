@@ -145,25 +145,20 @@ bool punctuation(string path)
     string origPunct;
     string inputPunct;
 
-    int k = 0;
-
     for(int i = 0; i < origPoem.length(); i++){
         for(int j = 0; j < signs.length(); j++){
                 if(origPoem[i] == signs[j]){
                     origPunct.append(1, origPoem[i]);
-                    k++;
                     break;
                 }
         }
     }
 
-    k = 0;
     cout << endl << endl;
     for(int i = 0; i < inputPoem.length(); i++){
         for(int j = 0; j < signs.length(); j++){
                 if(inputPoem[i] == signs[j]){
                     inputPunct.append(1, inputPoem[i]);
-                    k++;
                     break;
                 }
         }
@@ -184,7 +179,7 @@ bool punctuation(string path)
     return true;
 }
 
-bool alfabet(string path)
+bool alphabet(string path)
 {
     ofstream fout;
     fout.open(path, ios_base::app);
