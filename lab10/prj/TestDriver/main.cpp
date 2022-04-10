@@ -63,22 +63,18 @@ int main()
          << "Expected result: Випадкове число від 10 до 100\n\n"
          << "Actual result: " << TC_1_2_actualResult << "\n";
 
-         try{
-             cout << "Чи \"actual result\" є числом від 10 до 100? (Так - Y, Ні - N)\n" << endl;
-             while(true){
-                 switch(getch()){
-                     case 'Y': break;
-                     case 'N': throw 2; break;
-                     default: cout << "\a"; continue;
-                 }
-                 break;
+
+         cout << "Чи \"actual result\" є числом від 10 до 100? (Так - Y, Ні - N)\n" << endl;
+         while(true){
+             switch(getch()){
+             case 'Y': cout << "\tTEST CASE #2 PASSSED" << endl; break;
+             case 'N': cout << "\tTEST CASE #2 FAILED" << endl; break;
+             default: cout << "\a"; continue;
              }
-             cout << "\tTEST CASE #2 PASSSED" << endl;
-            TC_1_2_result++;
+             break;
          }
-         catch(int a){
-             cout << "\tTEST CASE #" << a << " FAILED" << endl;
-         }
+         TC_1_2_result++;
+
 
          file.open(outputPath, ios_base::out);
          file << "";
@@ -153,20 +149,15 @@ int main()
          << "Expected result: Дата й час дозапису інформації\n\n"
          << "Actual result: \n\n" << TC_2_2_actualResult << "\n";
 
-         try{
-             cout << "Чи \"actual result\" співпадають з поточним часом (можлива похибка: одна хвилина)? (Так - Y, Ні - N)\n" << endl;
-             while(true){
-                 switch(getch()){
-                     case 'Y': break;
-                     case 'N': throw 2; break;
-                     default: cout << "\a"; continue;
-                 }
-                 break;
+
+         cout << "Чи \"actual result\" співпадають з поточним часом (можлива похибка: одна хвилина)? (Так - Y, Ні - N)\n" << endl;
+         while(true){
+             switch(getch()){
+                 case 'Y': cout << "\tTEST CASE #2 PASSSED" << endl; break;
+                 case 'N': cout << "\tTEST CASE #2 FAILED" << endl; break;
+                 default: cout << "\a"; continue;
              }
-             cout << "\tTEST CASE #2 PASSSED" << endl;
-         }
-         catch(int a){
-             cout << "\tTEST CASE #" << a << " FAILED" << endl;
+             break;
          }
 
     cout << "=======================================================================================================================" << endl << endl;
