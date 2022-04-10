@@ -6,24 +6,6 @@
 
 using namespace std;
 
-string DRIVERreadfile(string path)
-{
-    ifstream file;
-
-    string text = "";
-    string line;
-
-    file.open(path);
-    if(!file.is_open()) { return path + " is not open, Test Case is Failed\n\n"; }
-    else{
-        while(getline(file, line)){
-            text += line + '\n';
-        }
-        file.close();
-        return text;
-    }
-}
-
 int main()
 {
     system("chcp 65001 & cls");
@@ -45,7 +27,7 @@ int main()
     string TC_1_1_expectedResult = "Модуль розробив Барамба Андрій\nЦентральноукраїнський Національний Технічний Університет\nКропивницький, Україна, 2022\n";
 
     cout << authorInformation(outputPath) << "\b";
-    string TC_1_1_actualResult = DRIVERreadfile(outputPath);
+    string TC_1_1_actualResult = readfile(outputPath);
 
     int TC_1_1_result = 0;
 
@@ -70,7 +52,7 @@ int main()
 
     cout << randNum(outputPath) << "\b";
 
-    string TC_1_2_actualResult = DRIVERreadfile(outputPath);
+    string TC_1_2_actualResult = readfile(outputPath);
 
     int TC_1_2_result = 0;
 
@@ -108,7 +90,7 @@ int main()
     string TC_1_3_expectedResult = "\nВідповідно до авторського оригіналу, у вхідному файлі пунктуаційних помилок немає\n";
 
     cout << punctuation(outputPath) << "\b";
-    string TC_1_3_actualResult = DRIVERreadfile(outputPath);
+    string TC_1_3_actualResult = readfile(outputPath);
 
     int TC_1_3_result = 0;
 
@@ -145,8 +127,8 @@ int main()
                                    "Хоч і живе своїм життям."
                                    "\nA B C D \nE F G H \nI J K L \nM N O P \nQ R S T \nU V W X \n  Y Z \n";
 
-    cout << alfabet(inputPath) << "\b";
-    string TC_2_1_actualResult = DRIVERreadfile(inputPath);
+    cout << alphabet(inputPath) << "\b";
+    string TC_2_1_actualResult = readfile(inputPath);
 
     cout << "=======================================================================================================================" << endl
          << "\t\t\t\t\t\tTASK 10.2 TEST CASE #1" << endl
@@ -162,7 +144,7 @@ int main()
 
 
     cout << dateTime(inputPath) << "\b";
-    string TC_2_2_actualResult = DRIVERreadfile(inputPath);
+    string TC_2_2_actualResult = readfile(inputPath);
 
     cout << "=======================================================================================================================" << endl
          << "\t\t\t\t\t\tTASK 10.2 TEST CASE #2" << endl
@@ -208,7 +190,7 @@ int main()
                 file.close();
          } else cout << "\tTest case #1 FAILED" << endl;
 
-         string outoutFileContents = DRIVERreadfile(outputPath);
+         string outoutFileContents = readfile(outputPath);
          cout << "Вміст файлу:" << endl << endl << outoutFileContents;
 
     cout << "=======================================================================================================================" << endl << endl;
@@ -233,7 +215,7 @@ int main()
              << "Expected result:\n" << TC_3_2_expectedResult[i] << "\n";
 
              cout << binNumber(numbers[i], outputPath) << "\b";
-             string TC_3_2_actualResult = DRIVERreadfile(outputPath);
+             string TC_3_2_actualResult = readfile(outputPath);
              cout << "Actual result:\n" << TC_3_2_actualResult << "\n\n";
 
          if(TC_3_2_actualResult == TC_3_2_expectedResult[i]){
@@ -261,7 +243,7 @@ int main()
         cout << binNumber(1023, outputPath) << "\b";
     }
 
-    outoutFileContents = DRIVERreadfile(outputPath);
+    outoutFileContents = readfile(outputPath);
     cout << "Вміст файлу:" << endl << endl << outoutFileContents << endl;
     cout << "=======================================================================================================================" << endl << endl;
 
