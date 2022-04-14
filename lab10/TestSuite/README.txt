@@ -1,1 +1,0 @@
-Open TS_10_1.docx, TS_10_2.docx, TS_10_3.docx only
