@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1651060444 source:d:\git_labs\baramba-andrii-ki-21-1\lab11\prj\modulesbaramba\main.cpp
+	"ModulesBaramba.h"
+
+1650732750 d:\git_labs\baramba-andrii-ki-21-1\lab11\prj\modulesbaramba\modulesbaramba.h
+	<iostream>
+	<fstream>
+	"struct_type_project_1.h"
+
+1651060088 d:\git_labs\baramba-andrii-ki-21-1\lab11\prj\struct_type_project_1.h
+	<string>
+
