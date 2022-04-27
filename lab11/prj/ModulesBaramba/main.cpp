@@ -12,12 +12,13 @@ void writeToRegistData(fstream &file, regEnrollment *regEn)
     }
 }
 
-void writeToFile(fstream &file, regEnrollment *regEn) {
-    if (regEn->ptr != nullptr)
-        writeToConsole(regEn->ptr);
+void dataOutput(fstream &file, regEnrollment *regEn, int action) {
+    #define OUTPUT(stream) ((stream) == 1 ? cout : file)
 
-
-    file << "Owner's first, last name, patronymic: " << regEn->firstName << " "
+    if (regEn->ptr != nullptr) {
+        dataOutput(file, regEn->ptr, action);
+    }
+    OUTPUT(action) << "Owner's first, last name, patronymic: " << regEn->firstName << " "
                                                      << regEn->lastName << " "
                                                      << regEn->patronymic << endl
          << "Car brand: " << regEn->carBrand << endl
@@ -28,21 +29,6 @@ void writeToFile(fstream &file, regEnrollment *regEn) {
          << "Car state number: " << regEn->govNumber << endl
          << "Additional information: " << regEn->additions << endl
          << "----------------------------------------------------------------" << endl;
-}
 
-void writeToConsole(regEnrollment *regEn) {
-    if (regEn->ptr != nullptr)
-        writeToConsole(regEn->ptr);
-
-    cout << "Owner's first, last name, patronymic: " << regEn->firstName << " "
-                                                     << regEn->lastName << " "
-                                                     << regEn->patronymic << endl
-         << "Car brand: " << regEn->carBrand << endl
-         << "Car graduation year: " << regEn->gradYear << endl
-         << "Car registration date: " << regEn->dateDay<< "."
-                                      << regEn->dateMonth << "."
-                                      << regEn->dateYear << endl
-         << "Car state number: " << regEn->govNumber << endl
-         << "Additional information: " << regEn->additions << endl
-         << "----------------------------------------------------------------" << endl;
+        if (action != 1) { cout << "Information writed to TextFile.txt" << endl; }
 }
