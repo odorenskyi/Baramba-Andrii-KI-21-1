@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <iomanip>
 #include "struct_type_project_1.h"
 
 using namespace std;
