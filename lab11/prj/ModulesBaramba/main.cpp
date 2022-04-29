@@ -4,16 +4,21 @@ using namespace std;
 
 void writeToRegistData(fstream &file, regEnrollment *regEn)
 {
+    if (regEn == nullptr) { cout << "Error: can't write an empty information" << endl; return; }
+    file.close();
+    file.open("RegisterDataBase.dat", ios::binary | ios::out | ofstream::trunc);
     file.seekg(0);
     regEnrollment *buffer = regEn;
-    file.write((char*)&*buffer, sizeof(regEnrollment));
-    while (buffer->ptr != nullptr) {
-        buffer = buffer->ptr;
+
+    while (buffer != nullptr) {
         file.write((char*)&*buffer, sizeof(regEnrollment));
+        buffer = buffer->ptr;
     }
+    file.close();
 }
 
 void dataOutput(fstream &file, regEnrollment *regEn, int action) {
+    if (regEn == nullptr) { cout << "Error: can't show an empty information" << endl; return; }
     #define OUTPUT(stream) ((stream) == 1 ? cout : file)
     regEnrollment *buffer = regEn;
     bool isFirstElem = true;
