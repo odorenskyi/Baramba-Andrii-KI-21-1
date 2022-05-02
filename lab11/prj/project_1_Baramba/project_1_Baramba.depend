@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1651518999 source:d:\git_labs\baramba-andrii-ki-21-1\lab11\prj\project_1_baramba\main.cpp
+	<iostream>
+	"ModulesStriuk.h"
+	"ModulesBaramba.h"
+	"ModulesOzhekhovskyi.h"
+
+1651518236 d:\git_labs\baramba-andrii-ki-21-1\lab11\prj\modulesstriuk\modulesstriuk.h
+	"struct_type_project_1.h"
+	<fstream>
+	<iostream>
+	<string>
+	<cstring>
+
+1651518356 d:\git_labs\baramba-andrii-ki-21-1\lab11\prj\struct_type_project_1.h
+	<string>
+
+1651518356 d:\git_labs\baramba-andrii-ki-21-1\lab11\prj\modulesbaramba\modulesbaramba.h
+	<iostream>
+	<fstream>
+	<iomanip>
+	"struct_type_project_1.h"
+
+1651518236 d:\git_labs\baramba-andrii-ki-21-1\lab11\prj\modulesozhekhovskyi\modulesozhekhovskyi.h
+	"struct_type_project_1.h"
+	<iostream>
+	<string>
+	<cstring>
+
