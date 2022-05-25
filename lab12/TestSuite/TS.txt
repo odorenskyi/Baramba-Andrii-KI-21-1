@@ -1,0 +1,12 @@
+hoopRadius: 25
+hoopSquare: 1963.495408
+hoopRadius: 0
+hoopSquare: 1963.495408
+hoopRadius: -10
+hoopSquare: 1963.495408
+hoopRadius: 31
+hoopSquare: 3019.070540
+hoopRadius: 28.71
+hoopSquare: 2589.502041
+hoopRadius: 28,71
+hoopSquare: 2589.502041

@@ -1,0 +1,42 @@
+ -------------------------------------------------- 
+| TEST CASE  1                                     |
+| (input)    Hoop radius:                   25 ì   |
+| (output)   Hoop square:          1963.495408 ì^2 |
+| (expected) Hoop square:          1963.495408 ì^2 |
+| TEST CASE RESULT:                       true     |
+ -------------------------------------------------- 
+ -------------------------------------------------- 
+| TEST CASE  2                                     |
+| (input)    Hoop radius:                    0 ì   |
+| (output)   Hoop square:          1963.495408 ì^2 |
+| (expected) Hoop square:          1963.495408 ì^2 |
+| TEST CASE RESULT:                       true     |
+ -------------------------------------------------- 
+ -------------------------------------------------- 
+| TEST CASE  3                                     |
+| (input)    Hoop radius:                  -10 ì   |
+| (output)   Hoop square:          1963.495408 ì^2 |
+| (expected) Hoop square:          1963.495408 ì^2 |
+| TEST CASE RESULT:                       true     |
+ -------------------------------------------------- 
+ -------------------------------------------------- 
+| TEST CASE  4                                     |
+| (input)    Hoop radius:                   31 ì   |
+| (output)   Hoop square:          3019.070540 ì^2 |
+| (expected) Hoop square:          3019.070540 ì^2 |
+| TEST CASE RESULT:                       true     |
+ -------------------------------------------------- 
+ -------------------------------------------------- 
+| TEST CASE  5                                     |
+| (input)    Hoop radius:                28.71 ì   |
+| (output)   Hoop square:          2589.502041 ì^2 |
+| (expected) Hoop square:          2589.502041 ì^2 |
+| TEST CASE RESULT:                       true     |
+ -------------------------------------------------- 
+ -------------------------------------------------- 
+| TEST CASE  6                                     |
+| (input)    Hoop radius:                   28 ì   |
+| (output)   Hoop square:          2589.502041 ì^2 |
+| (expected) Hoop square:          2589.502041 ì^2 |
+| TEST CASE RESULT:                       true     |
+ -------------------------------------------------- 
