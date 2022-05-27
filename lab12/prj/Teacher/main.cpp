@@ -7,12 +7,14 @@ bool fileInDirectory()
     string cpp = __FILE__;
     size_t found = cpp.find("\\lab12\\prj");
 
+    cout << cpp << endl;
+
     if (found == string::npos) {
         for (int i = 0; i < 100; i++) {
             cout << "\a";
         }
-        ofstream resFile("../TestSuite/TestResults.txt");
-        resFile << "����������� ������ ������� ��������� ����������� ������ ��������!" << endl;
+        ofstream resFile("../../TestSuite/TestResults.txt");
+        resFile << "Встановлені вимоги порядку виконання лабораторної роботи порушено!" << endl;
         resFile.close();
         return false;
     }
@@ -21,7 +23,10 @@ bool fileInDirectory()
 
 int main()
 {
-    if (!fileInDirectory()) { return -1; }
+    if (!fileInDirectory()) {
+        cout << "Встановлені вимоги порядку виконання лабораторної роботи порушено!" << endl;
+        return -1;
+    }
 
     ClassLab12_Baramba hoop;
 

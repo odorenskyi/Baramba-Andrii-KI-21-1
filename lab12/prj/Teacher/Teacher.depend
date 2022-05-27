@@ -1,13 +1,13 @@
 # depslib dependency file v1.0
-1653506744 source:d:\git_labs\baramba-andrii-ki-21-1\lab12\prj\teacher\main.cpp
+1653547678 source:d:\git_labs\baramba-andrii-ki-21-1\lab12\prj\teacher\main.cpp
 	"HelperFunctions.h"
 
-1653506758 d:\git_labs\baramba-andrii-ki-21-1\lab12\prj\helperfunctions.h
+1653546382 d:\git_labs\baramba-andrii-ki-21-1\lab12\prj\helperfunctions.h
 	"ModulesBaramba.h"
 	<iostream>
 	<fstream>
 	<iomanip>
 
-1653506386 d:\git_labs\baramba-andrii-ki-21-1\lab12\prj\modulesbaramba.h
+1653546661 d:\git_labs\baramba-andrii-ki-21-1\lab12\prj\modulesbaramba.h
 	<cmath>
 
